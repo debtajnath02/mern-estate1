@@ -7,7 +7,7 @@ import SignUp from "./pages/SignUp"
 import Profile from "./pages/Profile"
 function App() {
   const [count, setCount] = useState(0)
-
+  
   return (
     <>
       <BrowserRouter>
