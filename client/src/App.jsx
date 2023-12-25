@@ -5,18 +5,20 @@ import About from './pages/About'
 import SignIn from "./pages/SignIn"
 import SignUp from "./pages/SignUp"
 import Profile from "./pages/Profile"
+import Header from './component/Header'
 function App() {
   const [count, setCount] = useState(0)
-  
+
   return (
     <>
       <BrowserRouter>
+      <Header/>
       <Routes>
         <Route  path='/' element = {<Home/>}/>
-        <Route  path='/About' element = {<About/>}/>
-        <Route  path='/SignIn' element = {<SignIn/>}/>
-        <Route  path='/SignUp' element = {<SignUp/>}/>
-        <Route  path='/Profile' element = {<Profile/>}/>
+        <Route  path='/about' element = {<About/>}/>
+        <Route  path='/sign-in' element = {<SignIn/>}/>
+        <Route  path='/sign-up' element = {<SignUp/>}/>
+        <Route  path='/profile' element = {<Profile/>}/>
 
       </Routes>
       </BrowserRouter>
