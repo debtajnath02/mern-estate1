@@ -30,4 +30,6 @@ function App() {
 //password admin1234!@#$
 //confirm admin1234!@#$
 // code 863512
+
+//mongodb+srv://admin:admin@mern-estate.hpi95qr.mongodb.net/?retryWrites=true&w=majority
 export default App
