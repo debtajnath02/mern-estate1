@@ -1,5 +1,5 @@
 let express = require("express");
-
+let router = require("./routes/user.route"); // Change this line
 let mongoose = require("mongoose");
 let dotenv = require("dotenv");
 dotenv.config();
@@ -9,13 +9,12 @@ app.use(cors());
 mongoose
   .connect(process.env.MONGO)
   .then(() => {
-    console.log("conected with mongoose");
+    console.log("connected with mongoose");
   })
   .catch((err) => {
     throw err;
   });
 app.listen(3000, () => {
-  console.log("ghftguyhg");
+  console.log("Server is running on port 3000");
 });
-
-//client
+app.use("/api", router); // Change this line
