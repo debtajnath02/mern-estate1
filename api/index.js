@@ -20,5 +20,13 @@ app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
 app.use("/api", userRouter); // Change this line
-
+app.use((err, req,res,next)=>{
+let statusCode = err.statusCode || 500
+let massage = err.massage||"internel server err "
+return  res.status(statusCode).json({
+  success:false,
+  statusCode,
+  massage
+})
+})
 app.use("/signup", authRouter)
