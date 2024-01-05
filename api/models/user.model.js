@@ -12,14 +12,12 @@ email:{
     require:true,
     unique:true
 },password:{
-    type:Number,
-    require:true,
-    unique:true
+    type:String,
+    require:true
 }
 },{timestamps:true})
 
 
 let User = mongoose.model("User",userSchema)
 
-
-export default User
+module.exports = User
