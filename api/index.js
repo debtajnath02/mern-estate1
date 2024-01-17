@@ -29,4 +29,5 @@ return  res.status(statusCode).json({
   massage
 })
 })
-app.use("/signup", authRouter)
+
+app.use("/api/signup", authRouter)
