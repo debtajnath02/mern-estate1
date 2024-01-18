@@ -30,4 +30,4 @@ return  res.status(statusCode).json({
 })
 })
 
-app.use("/api/signup", authRouter)
+app.use("/api", authRouter)
