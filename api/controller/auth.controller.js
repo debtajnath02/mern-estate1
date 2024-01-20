@@ -30,6 +30,7 @@ let {password:pass, ...rest} = validUser._doc
 res.cookie("access_token", token, {httpOnly:true}).status(200).json(rest)
 } catch (error) {
     next(error)
+    
 }
 }
 
