@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {signInStart,signInSuccess,signInFailure} from "../redux/user/userSlice"
+import OAuth from "../component/OAuth";
 const SignIn = () => {
   let {loading, error} = useSelector((state)=> state.user)
   let [formData, setFormData] = useState({});
@@ -64,6 +65,7 @@ let res = await fetch("http://localhost:3000/api/signin", {
         >
           {loading ? "loading" : "home"}
         </button>
+        <OAuth/>
       </form>
       <div className="flex gap-2 mt-5">
         {" "}
