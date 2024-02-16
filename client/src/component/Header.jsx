@@ -4,7 +4,6 @@ import{FaSearch} from "react-icons/fa"
 import {useSelector} from "react-redux"
 const Header = () => {
   let {currentUser} = useSelector(state => state.user)
-   console.log(currentUser);
   return (
     <div className="bg-slate-300">
       <div className="flex justify-between items-center max-w-8xl mx-auto p-3">

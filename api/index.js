@@ -1,6 +1,7 @@
 let express = require("express");
 let userRouter = require("./routes/user.route"); // Change this line
 let mongoose = require("mongoose");
+let cookieParser = require("cookie-parser")
 let authRouter = require("./routes/auth.route")
 let dotenv = require("dotenv");
 dotenv.config();
@@ -8,6 +9,7 @@ let app = express();
 let cors = require("cors");
 app.use(cors());
 app.use(express.json())
+app.use(cookieParser())
 mongoose
   .connect(process.env.MONGO)
   .then(() => {
